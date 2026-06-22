@@ -29,9 +29,62 @@ nav {
     text-decoration: underline;
 }
 
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #06013b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #1a1a5c;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
 .mission {
     padding: 48px 32px;
-    text-align: left;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mission h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+.mission p {
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* Banner image */
@@ -81,4 +134,64 @@ nav {
 
 .hero-button:hover {
     background-color: #cccccc;
+}
+
+.mission-link {
+    display: inline-block;
+    background-color: #06013b;
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+.mission-link:hover {
+    background-color: #1a1a5c;
+}
+
+footer {
+    background-color: #06013b;
+    padding: 48px 32px;
+    margin-top: 350px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-logo {
+    height: 80px;
+    width: 80px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    opacity: 0.8;
+}
+
+.footer-copyright {
+    color: #cccccc;
+    margin: 0;
+    font-size: 0.9rem;
 }
