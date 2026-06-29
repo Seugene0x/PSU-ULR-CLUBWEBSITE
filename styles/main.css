@@ -87,6 +87,295 @@ nav {
     line-height: 1.6;
 }
 
+/* Contact form styles */
+.contact-section {
+    padding: 48px 32px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #06013b;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #06013b;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #06013b;
+}
+
+.submit-button {
+    background-color: #06013b;
+    color: white;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.submit-button:hover::before {
+    width: 100%;
+}
+
+.submit-button:hover {
+    color: #06013b;
+}
+
+/* Club roles styles */
+.roles-section {
+    padding: 32px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-header {
+    color: #06013b;
+    font-size: 2rem;
+    margin: 24px 0 16px 0;
+    text-align: center;
+    border-bottom: 2px solid #06013b;
+    padding-bottom: 8px;
+}
+
+.section-header:first-of-type {
+    margin-top: 0;
+}
+
+.roles-row {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.roles-row.two-items {
+    margin-left: 120px;
+}
+
+.roles-row.two-items .role-card {
+    flex: 1;
+    max-width: 400px;
+}
+
+.roles-row.three-items .role-card {
+    flex: 1;
+    max-width: 350px;
+}
+
+.role-card {
+    padding: 16px;
+    margin-bottom: 0;
+}
+
+.role-card h2 {
+    color: #06013b;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.role-card ul {
+    list-style-type: disc;
+    padding-left: 24px;
+    margin: 0;
+    text-align: left;
+}
+
+.role-card li {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.role-names {
+    margin-top: 4px;
+}
+
+.name-placeholder {
+    color: #06013b;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Volumes section styles */
+.volumes-section {
+    padding: 48px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.volumes-section h2 {
+    color: #06013b;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.volumes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    padding: 0 32px;
+}
+
+.volume-button {
+    background-color: #06013b;
+    color: white;
+    padding: 32px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.volume-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(6, 1, 59, 0.3);
+}
+
+.volume-button h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.volume-year {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.volume-button.upcoming {
+    background-color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.volume-button.upcoming:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Volume viewer section styles */
+.volume-viewer-section {
+    padding: 48px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.volume-viewer-section h2 {
+    color: #06013b;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.pdf-viewer-container {
+    width: 100%;
+    height: 800px;
+    margin-bottom: 32px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pdf-viewer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #06013b;
+    color: white;
+    padding: 12px 32px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.download-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.download-button:hover::before {
+    width: 100%;
+}
+
+.download-button:hover {
+    color: #06013b;
+}
+
 /* Banner image */
 .banner {
     width: 100%;
@@ -130,10 +419,29 @@ nav {
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #06013b;
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.hero-button:hover::before {
+    width: 100%;
 }
 
 .hero-button:hover {
-    background-color: #cccccc;
+    color: white;
 }
 
 .mission-link {
@@ -145,16 +453,39 @@ nav {
     font-weight: bold;
     border-radius: 4px;
     margin-top: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.mission-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    transition: width 0.3s ease;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.mission-link:hover::before {
+    width: 100%;
 }
 
 .mission-link:hover {
-    background-color: #1a1a5c;
+    color: #06013b;
 }
 
 footer {
     background-color: #06013b;
     padding: 48px 32px;
     margin-top: 350px;
+}
+
+.compact-footer {
+    margin-top: 48px;
 }
 
 .footer-content {
