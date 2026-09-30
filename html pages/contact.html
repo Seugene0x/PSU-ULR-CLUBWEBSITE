@@ -19,7 +19,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="club-roles.html">Executive Board</a></li>
-                <li><a href="Short-Form/">Short-Form</a></li>
+                <li><a href="Short-Form.html">Short-Form</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-btn">Volumes ▾</a>
                     <div class="dropdown-content">
@@ -40,23 +40,31 @@
             </ul>
         </nav>
 
-        <section class="hero">
-            <img class="hero-background" src="assets/images/Penn_state_old_main_summer.jpg" alt="Penn State Old Main">
-            <img class="logo" src="assets/images/PSU_ULR_logo.JPG" alt="PSU Law Review Logo">
-            <h1>Undergraduate Law Review at Penn State</h1>
-            <p>Advancing legal scholarship at Penn State University</p>
-            <a href="issues.html" class="hero-button">Read Latest Volume</a>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            <form action="https://formsubmit.co/REDACTED" method="POST">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
         </section>
 
-        <section class="mission">
-            <h2>Our Mission</h2>
-            <p>Our mission is to provide undergraduate students with a platform to publish legal research, develop strong analytical and writing skills, and engage in meaningful discussions of legal issues. We empower emerging scholars by offering opportunities to contribute to legal 
-                discourse and navigate the academic publishing process.</p>
-            <p> The Penn State Undergraduate Law Journal (ULR) is a student-run organization dedicated to providing undergraduates with
-                 the opportunity to learn about the field of law among like-minded peers.</p>
-        </section>
-
-        <footer>
+        <footer class="compact-footer">
             <div class="footer-content">
                 <img class="footer-logo" src="assets/images/PSU_ULR_logo.JPG" alt="PSU Law Review Logo">
                 <div class="footer-socials">
@@ -73,6 +81,3 @@
         </footer>
     </body>
 </html>
-
-
-<!-- IST DIRECTOR-->
