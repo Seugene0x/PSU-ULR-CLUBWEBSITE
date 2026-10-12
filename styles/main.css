@@ -1246,6 +1246,15 @@ footer {
     font-style: italic;
 }
 
+/* Articles whose footnotes mark italics by hand with <em> (Bluebook style) */
+.bluebook-italics ol {
+    font-style: normal;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
+
 .article-references li {
     margin-bottom: 2px;
     position: relative;
