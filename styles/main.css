@@ -1053,7 +1053,13 @@ footer {
     font-weight: 600;
 }
 
+/* Every summary is cut to the same number of lines, ending in "…" */
 .blog-card-excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
     margin: 0;
     color: #111;
     font-size: 1rem;
@@ -1065,6 +1071,25 @@ footer {
     color: #111;
     text-decoration: underline;
     font-weight: 600;
+}
+
+.blog-card > .read-more {
+    align-self: flex-start;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Line up image, title, writer, summary and Read More across cards in a row */
+@supports (grid-template-rows: subgrid) {
+    .blog-card {
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        row-gap: 12px;
+    }
+
+    .blog-card > .read-more {
+        justify-self: start;
+    }
 }
 
 .article-card-link {
@@ -1218,6 +1243,7 @@ footer {
     padding-left: 10px;
     font-size: 13px;
     line-height: 1.5;
+    font-style: italic;
 }
 
 .article-references li {
