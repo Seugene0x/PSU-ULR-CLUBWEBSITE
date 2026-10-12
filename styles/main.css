@@ -136,6 +136,15 @@ nav {
     padding-bottom: 24px;
 }
 
+/* Equal 24px gap above (to the divider) and below (board-with-logo 16px + role-card 8px) */
+.executive-board-heading {
+    color: #06013b;
+    font-size: 2rem;
+    text-align: center;
+    margin: 24px auto 0;
+    padding: 0 32px;
+}
+
 /* Contact form styles */
 .contact-section {
     padding: 48px 32px;
@@ -217,6 +226,41 @@ nav {
 
 .submit-button:hover {
     color: #06013b;
+}
+
+/* Short-form submission guidelines */
+.submission-guidelines {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px 32px;
+}
+
+.submission-guidelines h2 {
+    color: #06013b;
+    font-size: 1.5rem;
+    margin: 28px 0 8px;
+}
+
+.submission-guidelines p,
+.submission-guidelines li {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.submission-guidelines ul {
+    margin: 8px 0 0;
+    padding-left: 24px;
+}
+
+.submission-guidelines .submission-deadline {
+    margin: 0;
+    padding: 14px 18px;
+    border-left: 4px solid #06013b;
+    border-radius: 4px;
+    background-color: #f2f1f8;
+    color: #06013b;
+    font-weight: bold;
 }
 
 /* Club roles styles */
@@ -1075,12 +1119,79 @@ footer {
 .article-body {
     font-family: Georgia, "Times New Roman", serif;
     color: #111;
+    line-height: 1.5;
 }
 
 .article-body p {
-    margin: 0 0 18px;
+    margin: 0 0 1.5em;
     font-size: 16px;
     line-height: 1.5;
+    text-indent: 1.5em;
+}
+
+.article-body h2 {
+    margin: 1.2em 0 0.35em;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.section-chapter {
+    display: none;
+}
+
+.section-title {
+    display: none;
+}
+
+.article-body h3 {
+    display: none;
+}
+
+/* Previous / next blog post links at the end of an article */
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.post-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 45%;
+    color: #111;
+    text-decoration: none;
+}
+
+.post-nav-next {
+    margin-left: auto;
+    text-align: right;
+}
+
+.post-nav-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.post-nav-title {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.post-nav-link:hover .post-nav-title {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .article-intro {
@@ -1114,6 +1225,7 @@ footer {
     position: relative;
     padding: 1px 3px;
     border-radius: 6px;
+    overflow-wrap: anywhere;
     transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -1145,6 +1257,7 @@ footer {
     font-weight: 600;
     display: inline-block;
     padding: 0 0.15em;
+    text-indent: 0;
     border-radius: 4px;
     scroll-margin-top: 90px;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
@@ -1590,6 +1703,56 @@ footer {
 
     .pdf-viewer-container {
         height: 55vh;
+    }
+}
+
+/* ===== Responsive: blog, members, and article additions ===== */
+@media (max-width: 900px) {
+    .blog-posts-grid,
+    .single-post-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-posts-section {
+        padding: 0 16px;
+    }
+
+    .blog-posts-grid,
+    .single-post-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .executive-board-heading {
+        font-size: 1.5rem;
+        padding: 0 16px;
+    }
+
+    .editor-writer-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .article-page {
+        padding: 24px 16px 0;
+    }
+
+    .post-nav {
+        flex-direction: column;
+    }
+
+    .post-nav-link {
+        max-width: none;
+    }
+
+    .submission-guidelines {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .two-column-names {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
