@@ -101,7 +101,7 @@ nav {
 }
 
 .mission {
-    padding: 48px 32px;
+    padding: 48px 32px 12px;
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
@@ -127,12 +127,22 @@ nav {
 .mission p {
     font-size: 1.2rem;
     line-height: 1.6;
+    margin-bottom: 8px;
 }
 
 .board-title {
     border-bottom: 2px solid #06013b;
     max-width: 1100px;
     padding-bottom: 24px;
+}
+
+/* Equal 24px gap above (to the divider) and below (board-with-logo 16px + role-card 8px) */
+.executive-board-heading {
+    color: #06013b;
+    font-size: 2rem;
+    text-align: center;
+    margin: 24px auto 0;
+    padding: 0 32px;
 }
 
 /* Contact form styles */
@@ -216,6 +226,41 @@ nav {
 
 .submit-button:hover {
     color: #06013b;
+}
+
+/* Short-form submission guidelines */
+.submission-guidelines {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px 32px;
+}
+
+.submission-guidelines h2 {
+    color: #06013b;
+    font-size: 1.5rem;
+    margin: 28px 0 8px;
+}
+
+.submission-guidelines p,
+.submission-guidelines li {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.submission-guidelines ul {
+    margin: 8px 0 0;
+    padding-left: 24px;
+}
+
+.submission-guidelines .submission-deadline {
+    margin: 0;
+    padding: 14px 18px;
+    border-left: 4px solid #06013b;
+    border-radius: 4px;
+    background-color: #f2f1f8;
+    color: #06013b;
+    font-weight: bold;
 }
 
 /* Club roles styles */
@@ -933,6 +978,365 @@ footer {
     margin: 0;
     font-size: 0.9rem;
 }
+
+/* Blog posts section styles */
+.blog-posts-section {
+    padding: 0 32px 0;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.blog-posts-title {
+    text-align: center;
+    font-size: clamp(2.1rem, 2.3vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 12px;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.blog-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+.single-post-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: start;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blog-card-image {
+    width: 100%;
+    aspect-ratio: 1.42;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 24px;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.single-post-grid .blog-card-image {
+    aspect-ratio: 1.42;
+    object-position: center center;
+}
+
+.blog-card-title {
+    margin: 0;
+    color: #111;
+    font-size: clamp(1rem, 1vw + 0.7rem, 1.4rem);
+    line-height: 1.35;
+    font-weight: 400;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.blog-card-meta {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: -4px;
+}
+
+.blog-card-author {
+    margin: 0;
+    color: #111;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Every summary is cut to the same number of lines, ending in "…" */
+.blog-card-excerpt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+    margin: 0;
+    color: #111;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.read-more {
+    color: #111;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.blog-card > .read-more {
+    align-self: flex-start;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* Line up image, title, writer, summary and Read More across cards in a row */
+@supports (grid-template-rows: subgrid) {
+    .blog-card {
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        row-gap: 12px;
+    }
+
+    .blog-card > .read-more {
+        justify-self: start;
+    }
+}
+
+.article-card-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-card-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.article-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 48px 0;
+}
+
+.article-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.article-title {
+    margin: 0;
+    font-size: clamp(2.5rem, 3vw, 4.3rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.article-meta {
+    margin: 18px 0 18px;
+    color: #444;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.article-byline {
+    margin: 10px 0 24px;
+    color: #111;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.article-byline p {
+    margin: 0;
+}
+
+.article-body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #111;
+    line-height: 1.5;
+}
+
+.article-body p {
+    margin: 0 0 1.5em;
+    font-size: 16px;
+    line-height: 1.5;
+    text-indent: 1.5em;
+}
+
+.article-body h2 {
+    margin: 1.2em 0 0.35em;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.section-chapter {
+    display: none;
+}
+
+.section-title {
+    display: none;
+}
+
+.article-body h3 {
+    display: none;
+}
+
+/* Previous / next blog post links at the end of an article */
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.post-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 45%;
+    color: #111;
+    text-decoration: none;
+}
+
+.post-nav-next {
+    margin-left: auto;
+    text-align: right;
+}
+
+.post-nav-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.post-nav-title {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.post-nav-link:hover .post-nav-title {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.article-intro {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.article-references {
+    margin-top: 32px;
+    padding-top: 12px;
+    border-top: 1px solid #444;
+    scroll-margin-top: 90px;
+}
+
+.article-references h3 {
+    margin: 0 0 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.article-references ol {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Articles whose footnotes mark italics by hand with <em> (Bluebook style) */
+.bluebook-italics ol {
+    font-style: normal;
+}
+
+.small-caps {
+    font-variant: small-caps;
+}
+
+.article-references li {
+    margin-bottom: 2px;
+    position: relative;
+    padding: 1px 3px;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.article-references li a {
+    color: #111;
+    text-decoration: none;
+}
+
+.footnote-return {
+    color: #111;
+    text-decoration: none;
+    margin-right: 6px;
+    font-weight: 600;
+}
+
+.footnote-return:hover {
+    text-decoration: underline;
+}
+
+.article-content sup {
+    font-size: 0.75em;
+    line-height: 0;
+    vertical-align: super;
+}
+
+.footnote-link {
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0 0.15em;
+    text-indent: 0;
+    border-radius: 4px;
+    scroll-margin-top: 90px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footnote-link:hover {
+    text-decoration: underline;
+}
+
+.footnote-highlight {
+    background-color: #f9f0d0;
+    box-shadow: inset 0 0 0 2px #b28a4e;
+    animation: footnote-pulse 1.6s ease-out 1;
+}
+
+@keyframes footnote-pulse {
+    0% { background-color: #fff7d6; }
+    35% { background-color: #f4d98e; }
+    100% { background-color: #f9f0d0; }
+}
+
+@media (max-width: 900px) {
+    .article-page {
+        padding: 28px 20px 0;
+    }
+
+    .article-title {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .article-title {
+        font-size: 2rem;
+    }
+
+    .article-meta,
+    .article-byline,
+    .article-body p,
+    .article-intro {
+        font-size: 1rem;
+    }
+}
+
 /* ===== Responsive: tablets and below ===== */
 @media (max-width: 900px) {
     nav {
@@ -1236,7 +1640,6 @@ footer {
     .event-info-box-2 h2 {
         font-size: 1.3rem;
     }
-}
 
     .event-date {
         padding: 12px;
@@ -1335,6 +1738,56 @@ footer {
 
     .pdf-viewer-container {
         height: 55vh;
+    }
+}
+
+/* ===== Responsive: blog, members, and article additions ===== */
+@media (max-width: 900px) {
+    .blog-posts-grid,
+    .single-post-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-posts-section {
+        padding: 0 16px;
+    }
+
+    .blog-posts-grid,
+    .single-post-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .executive-board-heading {
+        font-size: 1.5rem;
+        padding: 0 16px;
+    }
+
+    .editor-writer-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .article-page {
+        padding: 24px 16px 0;
+    }
+
+    .post-nav {
+        flex-direction: column;
+    }
+
+    .post-nav-link {
+        max-width: none;
+    }
+
+    .submission-guidelines {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .two-column-names {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
