@@ -283,7 +283,7 @@ nav {
     width: min(95vw, 1000px);
     aspect-ratio: 1;
     transform: translate(-50%, -50%);
-    background-image: url('../assets/images/PSU_ULR_logo.JPG');
+    background-image: url('../assets/images/PSU_ULR_logo.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
